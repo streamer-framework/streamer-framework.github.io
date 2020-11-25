@@ -1,1 +1,4 @@
-# streamer-framework.github.io
+STREAMER is a cross-platform framework that helps data scientists to easily integrate machine learning algorithms in realistic streaming operational contexts. 
+Testing algorithms is straight forward and can be completed in three steps: (1) define the data format to work with; (2) implement or call the algorithm to be tested; and (3) set up the streaming context through the properties files. Furthermore, STREAMER also satisfies all mentioned key features: scalability -ability to scale across a cluster-, fault-tolerance -guarantee the delivery despite any fault-, availability -data is accessible and operational at any moment-, and flexibility -user can adapt new algorithms and applications-. 
+
+STREAMER implements the whole chain of data stream collection, processing, knowledge extraction and visualization.
