@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Reciprocal 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140119
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="customized-style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper" align="center" width="100%">
+		<div id="header" class="container">
+			<div id="logo" >
+				<h1><a href="#">STREAMER</a></h1> <br>
+				<h2>a Powerful Framework for Continuous Learning in Data Streams</h2>
+			</div>
+			<!--
+			<div id="social">
+				<ul class="contact">
+					<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+					<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+					<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+					<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+					<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+				</ul>
+			</div>
+			-->
+		</div>
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="./index.html" accesskey="1" title="">Homepage</a></li>
+				<li><a href="./about-us.html" accesskey="3" title="">About Us</a></li>
+				<li><a href="./contact-us.html" accesskey="5" title="">Contact Us</a></li>
+				<!--<li><a href="#" accesskey="1" title="">Services</a></li>
+				<li><a href="#" accesskey="2" title="">Our Clients</a></li>
+
+				<li><a href="#" accesskey="4" title="">Careers</a></li>
+				-->
+			</ul>
+		</div>
+	</div>
+	<div id="page" class="container">
+		<h2> Getting Started </h2>
+		<p>Welcome to STREAMER! This guide will show you how to easily install and run your first use case with STREAMER. No worries, the process is straightforward. (For a detailed presentation of STREAMER read the <a href="./docs/UserGuideSTREAMER.pdf" target="_blank">“UserGuide.pdf”</a>.)
+<br/>Here, the installation of STREAMER is presented in breif. For the detailed installation guide of STREAMER, read the <a href="./docs/GettingStartedGuideSTREAMER.pdf" target="_blank">“GettingStartedGuide.pdf”</a>
+<br/>Let’s start!
+<br/>First of all, download STREAMER framework + environment setup from 
+<br/><a href="https://github.com/streamer-framework/streamer">https://github.com/streamer-framework/streamer</a>
+<br/>However, before we start the installation, you need to decide how you will use the framework. STREAMER is conceived to be used in two different ways (depending on your necessities):
+<br/>
+<ol>
+	<li><b>Development use:</b> (oriented to data scientists). You are interested on directly working on the code of the framework to add/develop several functionalities and test them.</li>
+	<li><b>Product use:</b> : (oriented to industrial use). You want to use the framework as a product (no need to get in contact with the code but execute STREAMER). 
+In this case, you need to have in your computer the basic services STREAMER requires and STREAMER instance already packed.
+</li>
+</ol>
+<br/><br/>
+
+
+<h2>1) Getting ready for Deployment use</h2>
+<ol>
+	<li>In this case, you need to run the basic services that STREAMER requires. You can install them using the docker (recommended) following the steps of section 3.1, or install them yourself following section 4.</li>
+	<li>Install Eclipse (<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>) or the IDE you prefer.</li>
+	<li>Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
+	<li>Create your first use case in STREAMER by following the steps of section 6.</li>
+	<li>Run your application in STREAMER as section 5 shows.</li>
+</ol>
+<br/><br/>
+
+
+<h2>2) Getting ready for Production use</h2>
+Try our example use case in STREAMER by following the steps of Section 3.
+<br/><br/>
+
+
+<h2>3) Using Docker</h2>
+We make simple and transparent the installation of STREAMER and its services by using Docker. We provide 2 docker files that serve to: 
+<ol>
+	<li><b>Services environment</b> (section 3.1): it contains all the services used by the framework (Kafka & Zookeeper, Redis. InfluxDB, Kibana & ElasticSearch).</li>
+	<li><b>Production environment</b> (section 3.2): it contains STREAMER for production purpose.</li>
+</ol>
+<br/>
+<h3>3.1	Install & run all the services from Docker (recommended)</h3>
+ [Warning]: for Linux based systems, you may need to run all the commands in “sudo” mode as, for instance, “sudo docker-compose up --build -d “.
+<br/>
+Follow the following steps to set all necessary services before running STREAMER:
+<ol>
+	<li>Install docker on your machine. At the following link, you will find how to install the docker for all the different operating systems (Windows, Linux, Mac): <a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a></li>
+	<li>[For Linux] also install docker-compose from <a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></li>
+	<li>Unzip the provided folder “streamer_environment”.</li>
+	<li>Open a terminal and change directory to this “streamer_environment” directory.</li>
+	<li>Run the following command to start the services:<br/><strong>docker-compose up --build -d</strong></li>
+</ol>
+
+In order to check if the services are running properly, check the following command: <br/>
+docker ps
+<br/><br/>
+To stop the services, use the following command: <br/>
+<strong>docker-compose down</strong>
+<br/><br/>
+Note: If after following the previous steps, you face a similar error to <br/>
+ERROR: [1] bootstrap checks failed [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+<br/>you can solve it by increasing your virtual memory. Run the command: 
+<br/><strong>sudo sysctl -w vm.max_map_count=262144</strong>
+<br/>and then build the docker again with:
+<br/><strong>sudo docker-compose up --build –d</strong>
+<br/><br/>
+
+<h3>3.2	Running STREAMER in production environment</h3>
+
+[Warning]: for Linux based systems, you may need to run all the commands in “sudo” mode as, for instance, sudo docker-compose up --build -d.
+<br/>
+<ol>
+<li>Before running STREAMER for production purpose, complete all the steps of case 1 above to run all the services.</li>
+<li>Open a terminal and go to directory “streamer_environment/streamer_environment” directory (sub-folder of streamer_environment folder).</li>
+<li>Run the following command to start the framework:<br/>
+<strong>docker-compose up --build</strong><br/>
+If you add (-d) to the command above, it should start in the background. In case you are interested in showing the output of the framework, feel free to leave it like it-is.</li>
+</ol>
+
+
+In order to check if the framework is running properly, check the following command: <br/>
+docker ps
+<br/><br/>
+To stop the services, use the following command: <br/>
+If you started the framework without using (-d) property, first press (ctrl + c) and then the following (with (-d) or not):<br/>
+<strong>docker-compose down</strong>
+<br/><br/>
+
+<h2>4) Installing STREAMER services yourself (from sources)</h2>
+STREAMER use the following services that you can install yourself:<br/>
+[Compulsory]:<br/>
+- apache kafka / soft / Apache License 2.0 / kafka.version=2.12-2.3.0 <br/>
+- zookeeper / soft / Apache License 2.0 / zookeeper.version=3.4.14 
+<a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a> <br/>
+- redis server / soft / BSD / Redis version=5.0.5 <a href="https://redis.io/">https://redis.io/</a> <br/>
+- influxdb / soft / MIT / version 1.7.7 <a href="https://portal.influxdata.com/">https://portal.influxdata.com/</a> <br/>
+<br/>
+[Optional]:<br/>
+- elasticsearch / soft / Apache License 2.0 / version=7.5.2 <a href="https://www.elastic.co/">https://www.elastic.co/</a>  <br/>
+- kibana / soft / Elastic License/Apache License / version=7.5.2 <a href="https://www.elastic.co/kibana">https://www.elastic.co/kibana</a> <br/>
+<br/>
+A) For running from LOCALHOST<br/>
+$  --zookeeper localhost:2181<br/>
+$  --kafka localhost:9092<br/>
+$ --broker-list localhost:9092<br/><br/>
+B) For running in CLUSTER<br/>
+ * zookeeper in port 2181 and with hadoop1-3<br/>
+ * Kafka and bootstrap-server in port 6667 and with hadoop1-9<br/>
+$ --zookeeper hadoop1:2181<br/>
+$ --kafka hadoop1:6667<br/>
+$ --broker-list hadoop1:6667<br/><br/>
+Sections below provide some guidelines to help you install the services yourself.<br/>
+<br/><br/>
+<h3>4.1	Manually installation in Linux</h3>
+<h4>Zookeeper</h4>
+1)	Download and install Zookeeper. 2 options:<br/>
+	1.a) $ sudo apt-get install zookeeper<br/>
+or<br/>
+	1.b) Download Zookeeper: <a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a><br/>
+2)	From command line, go to zookeeper/bin folder and run:<br/>
+ $sudo zookeeper-server-start /etc/kafka/zookeeper.properties<br/>
+(Zookeeper is now running on localhost:2181)<br/>
+<br/>
+<h4>Kafka</h4>
+3)	Download and install conlfuent: <a href="http://docs.confluent.io/current/installation.html#installation-apt">http://docs.confluent.io/current/installation.html#installation-apt</a><br/>
+4)	Download Kafka and install it: <a href="https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-14-04</a><br/>
+5)	From command line, go to kafka/bin folder and run:<br/>
+$sudo kafka-server-start /etc/kafka/server.properties <br/>
+<br/>
+<h4>Redis</h4>
+6)	Download Redis : <a href="https://redis.io/download">https://redis.io/download</a> and install it<br/>
+7)	In Redis folder (where you installed it), go to folder "src" and run the command: $./redis-server<br/>
+<br/>
+<h4>InfluxDB</h4>
+8)	Download InfluxDB and install it: <a href="https://docs.influxdata.com/influxdb/v0.9/introduction/installation/">https://docs.influxdata.com/influxdb/v0.9/introduction/installation/</a><br/>
+<br/>
+<h4>NodeJS</h4>
+9)	In command line install: $sudo apt-get install npm<br/>
+10)	Download NodeJS for Linux and uncompress it: <a href="https://nodejs.org/es/download/">https://nodejs.org/es/download/</a> and install it<br/>
+11)	Go to streamer\src\main\resources\graphics and run: $ npm install<br/>
+12)	That will install all the libraries needed<br/>
+13)	Run $./node ../../../dsplatform/streamer/src/main/resources/graphics/app.js<br/>
+14)	Open a web browser and type: localhost:8080<br/>
+
+The interface will be displayed there.<br/>
+<br/>
+<h4>Kibana & ElasticSearch</h4>
+15)	Download Elasticsearch 7.5.2 and Kibana 7.5.2.<br/>
+16)	Go to the bin folders where you installed kibana and elastic search. Run in command line:<br/> 
+	$ elasticsearch-7.5.2/bin/elasticsearch<br/>
+	$ Kibana-7.5.2/bin/kibana<br/>
+<br/><br/>
+<h3>4.2	Manually installation in Windows</h3>
+<h4>Zookeeper</h4>
+1)	Download Zookeeper : <a href="http://www-eu.apache.org/dist/zookeeper/">http://www-eu.apache.org/dist/zookeeper/</a><br/>
+2)	Extract Zookeeper and go to zookeeper/bin folder and run zkServer.cmd <br/>
+Note : You may rename the zoo_sample.cfg file (in .\conf) into zoo.cfg <br/>
+Zookeeper is now running on localhost:2181<br/>
+<br/>
+<h4>Kafka</h4>
+3)	3)	Download Kafka binary version: <a href="http://kafka.apache.org/downloads.html">http://kafka.apache.org/downloads.html</a>. <br/>
+4)	In command line go to kafka folder.<br/>
+5)	Extract Kafka and in .\config\server.properties replace log.dirs=c:/kafka/kafka-logs<br/>
+6)	Run this command to start Kafka : .\bin\windows\kafka-server-start.bat .\config\server.properties<br/>
+7)	A Kafka broker is now running <br/>
+<br/>
+<h4>Redis</h4>
+8)	Download Redis : <a href="https://github.com/rgl/redis/downloads">https://github.com/rgl/redis/downloads</a> and install it<br/>
+9)	In Redis folder (where you installed it) run the command : redis-server.exe<br/>
+<br/>
+<h4>InfluxDB</h4>
+10)	Download InfluxDB: <a href="https://dl.influxdata.com/influxdb/releases/influxdb-1.1.0_windows_amd64.zip">https://dl.influxdata.com/influxdb/releases/influxdb-1.1.0_windows_amd64.zip</a> <br/>
+11)	Unzip and in \influxdb-1.1.0_windows_amd64\influxdb-1.1.0-1 run: influxd.exe<br/>
+<br/>
+<h4>NodeJS</h4>
+12)	Download NodeJS for Windows : <a href="https://nodejs.org/en/">https://nodejs.org/en/</a> and install it<br/>
+13)	Now launch the Node.js command prompt and in the framework folder, go to streamer\src\main\resources\graphics and run : npm install<br/>
+That will install all the libraries needed<br/>
+<br/>
+<h4>Kibana & ElasticSearch</h4>
+15)	Download Elasticsearch 7.5.2 and Kibana 7.5.2.<br/>
+16)	Go to the bin folders where you installed kibana and elastic search. Run in command line:<br/> 
+	$ elasticsearch-7.5.2/bin/elasticsearch<br/>
+	$ Kibana-7.5.2/bin/kibana<br/>
+<br/><br/>
+
+
+<h2>5) How to run a STREAMER use case</h2>
+1)	Set up all the properties in the files .props within src/main/resources.<br/>
+<br/>
+2)	For using the data producer simulator functionality, run ProducerMain.java (placed in folder streamer/src/test/java/cea/streamer):
+ProducerMain.java [origin1 … originN] <br/>
+
+A producer is now writing in Kafka topic(s).
+[origin1 … originN] Arguments are optional. Each of them runs a problem in a separate process; its name originX indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.
+<br/><br/>
+3)	For using the streaming pipeline functionality, run LauncherMain.java (placed in folder  streamer\src\test\java\cea\streamer) as:
+LauncheMain.java [origin1 … originN]
+<br/>
+[origin1 … originN] Arguments are optional. Each of them runs a problem in a separate process; its name originX indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.
+<br/><br/>
+4)	For using the learning API in offline mode (algorithms test and/or train) run AlgInvokerMain_offline.java (placed in folder streamer\src\test\java\cea\streamer) as
+AlgInvoker_Main.java arg1 arg2 arg3 arg4 [arg5]
+<br/>
+Arguments are:<br/>
+a)	arg1. Data source type: From where data must be retrieved. Option: [influx or file]. It could be either “influx” to build the model using the data stored in InfluxDB or “file” to directly use the data from the file specify in algs.properties (data.training).<br/>
+b)	arg2. Origin: [influx-data-base-name or origin]. origin indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.<br/>
+c)	arg3. Perform training [true or false] (train).<br/>
+d)	arg4. Perform model running [true or false] (test).<br/>
+e)	[arg5]. [Optional] Path from where to store/retrieve the trained model.<br/>
+<br/><br/>
+5)	For using kibana graphical interface (only available for ECG anomaly detection problem) open a web browser and type http://localhost:5601. The dashboard will appear.<br/>
+<br/><br/>
+
+
+<h2>6) How to Integrate your Algorithm in STREAMER</h2>
+In order to create your running application in STREAMER, two main phases are required:<br/>
+
+<h3> PHASE 1: INTEGRATE OR CREATE YOUR Algorithm</h3>
+1)	We add the main algorithm class to the cea.streamer.algs package :<br/>
+a.	Implement both methods learn and run for training and testing phases (if necessary).<br/>
+b.	If your model is not coded in Java, you will have to use Redis as an intermediary data storage to save the arriving records to be accessible from the algorithm (in the example below, the algorithm is coded in Python).<br/>
+<br/>
+2)	Add the training and testing python files to the path src/main/resources/algs<br/>
+a.	While coding the algorithms in Python, pay attention for the training file to read the data from Redis, and write the model in Redis.<br/>
+b.	Likewise, for the testing file, pay attention to read the data and the model from Redis, and write the predictions as one line String in Redis and precise the separator used between the predictions’ values in another redis key. These predictions are read by the framework in order to do the realtime evaluation of the model’s performance.<br/>
+<br/>
+
+<h3> PHASE 2: INTEGRATE OR CREATE USE CASE APPLICATION</h3>
+1)	Add a folder with the project name<br/>
+2)	Add two configuration files to this folder:<br/>
+a.	Algs.props<br/>
+b.	Streaming.props<br/>
+
+Note: The user can choose metrics for evaluating the model by simply adding the name of the metric class. It is also possible for the user to extend the existing metrics with new ones.<br/>
+3)	Create the record class:<br/> 
+a.	It is essential to name the record class in this exact way:<br/> 
+problem.type + “Record” + “.java”<br/> 
+b.	You can precise the headers of the dataset<br/> 
+c.	Implement the fill method to indicate how the records should be filled with the correct values.<br/> 
+d.	In case the dataset does not contain timestamp, use sleep and generate a new timestamp.<br/> 
+<br/>
+<br/>
+As you arrived this far, it is time to run the application:<br/>
+<strong>cmd1> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.LauncherMain kdd-cup-99</strong><br/>
+<strong>cmd2> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.ProducerMain kdd-cup-99</strong><br/>
+
+
+<br/><br/>
+</p>
+	</div>
+	<div id="portfolio-wrapper">
+		<div id="portfolio" class="container">
+			<div class="title">
+				<h2>STREAMER</h2>
+				<span class="byline">a Powerful Framework for Continuous Learning in Data Streams</span> </div>
+			<div class="column1">
+				<div class="box">
+					<span class="icon icon-download-alt"></span>
+					<h3>Code</h3>
+					<!--<p>Code published on Github</p>-->
+					<a href="https://github.com/streamer-framework/streamer" target="_blank" class="button">Link</a>  
+				</div>
+			</div>
+			<div class="column2">
+				<div class="box">
+					<span class="icon icon-magic"></span>
+					<h3>Quick Start</h3>
+					<a href="./getting-started.html" class="button">Link</a>  
+				</div>
+			</div>
+			<div class="column3">
+				<div class="box">
+					<span class="icon icon-book"></span>
+					<h3>STREAMER Guide</h3>
+					<a href="./docs/UserGuideSTREAMER.pdf" target="_blank" class="button">Link</a>  
+				</div>
+			</div>
+			<div class="column4">
+				<div class="box">
+					<span class="icon icon-comments"></span>
+					<h3>Contact</h3>
+					<p><b>Sandra GARCIA-RODRIGUEZ</b>
+					<br><a href="mailto:sandra.garciarodriguez@cea.fr">sandra.garciarodriguez@cea.fr</a></p>
+					<p><b>Mohammad ALSHAER</b>
+					<br><a href="mailto:mohammad.alshaer@cea.fr">mohammad.alshaer@cea.fr</a></p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>&copy; CEA. All rights reserved. This framework was developed and published by SANDRA GARCIA-RODRIGUEZ & Mohammad ALSHAER.</p>
+</div>
+</body>
+</html>

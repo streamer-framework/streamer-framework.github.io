@@ -1,0 +1,116 @@
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* unvisited link */
+a:link {
+  color: cadetblue;
+}
+
+/* visited link */
+a:visited {
+  color: darkslategray;
+}
+
+/* mouse over link */
+a:hover {
+  color: deeppink;
+}
+
+/* selected link */
+a:active {
+  color: red;
+}
+
+/* unvisited link */
+a.button:link {
+  color: white;
+}
+
+/* visited link */
+a.button:visited {
+  color: lightsteelblue;
+}
+
+/* mouse over link */
+a.button:hover {
+  color: cadetblue;
+}
+
+/* selected link */
+a.button:active {
+  color: red;
+}
+
+#footer p {
+	color:beige!important;
+}
+
+hr {
+  border:none;
+  border-top:2px dashed crimson;
+  color:#fff;
+  background-color:#fff;
+  height:10px;
+  width:50%;
+  padding-top: 50px;
+  display:block!important;
+}
+
+/*TEAM*/
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 45%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button_team {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button_team:hover {
+  background-color: #555;
+}
