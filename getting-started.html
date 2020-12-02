@@ -32,28 +32,12 @@ Released   : 20140119
 				<h1><a href="#">STREAMER</a></h1> <br>
 				<h2>a Powerful Framework for Continuous Learning in Data Streams</h2>
 			</div>
-			<!--
-			<div id="social">
-				<ul class="contact">
-					<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-					<li><a href="#" class="icon icon-facebook"><span></span></a></li>
-					<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
-					<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
-					<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
-				</ul>
-			</div>
-			-->
 		</div>
 		<div id="menu" class="container">
 			<ul>
 				<li><a href="./index.html" accesskey="1" title="">Homepage</a></li>
 				<li><a href="./about-us.html" accesskey="3" title="">About Us</a></li>
 				<li><a href="./contact-us.html" accesskey="5" title="">Contact Us</a></li>
-				<!--<li><a href="#" accesskey="1" title="">Services</a></li>
-				<li><a href="#" accesskey="2" title="">Our Clients</a></li>
-
-				<li><a href="#" accesskey="4" title="">Careers</a></li>
-				-->
 			</ul>
 		</div>
 	</div>
@@ -78,10 +62,16 @@ In this case, you need to have in your computer the basic services STREAMER requ
 <h2>1) Getting ready for Deployment use</h2>
 <ol>
 	<li>In this case, you need to run the basic services that STREAMER requires. You can install them using the docker (recommended) following the steps of section 3.1, or install them yourself following section 4.</li>
-	<li>Install Eclipse (<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>) or the IDE you prefer.</li>
-	<li>Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
-	<li>Create your first use case in STREAMER by following the steps of section 6.</li>
-	<li>Run your application in STREAMER as section 5 shows.</li>
+	<li>1- Install Eclipse (<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>) or the IDE you prefer.</li>
+	<li>2- Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
+	<li>3- [Optional] you are now ready to run our example use case: <br>
+		Run from eclipse the main class ProducerMain to launch the data ingester, or from console:<br>
+		<strong>java ProducerMain</strong><br>
+		Run from eclipse the main class LauncherMain to launch the streaming pipeline, or from console.<br>
+		<strong>java LauncherMain</strong>
+
+	<li>4- Create your first use case in STREAMER by following the steps of section 6.</li>
+	<li>5- Run your application in STREAMER as section 5 shows.</li>
 </ol>
 <br/><br/>
 
@@ -268,7 +258,7 @@ c)	arg3. Perform training [true or false] (train).<br/>
 d)	arg4. Perform model running [true or false] (test).<br/>
 e)	[arg5]. [Optional] Path from where to store/retrieve the trained model.<br/>
 <br/><br/>
-5)	For using kibana graphical interface (only available for ECG anomaly detection problem) open a web browser and type http://localhost:5601. The dashboard will appear.<br/>
+5)	For using kibana graphical interface open a web browser and type http://localhost:5601. The dashboard will appear.<br/>
 <br/><br/>
 
 
