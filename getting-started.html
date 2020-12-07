@@ -47,7 +47,7 @@ Released   : 20140119
 <br/>Here, the installation of STREAMER is presented in breif. For the detailed installation guide of STREAMER, read the <a href="./docs/GettingStartedGuideSTREAMER.pdf" target="_blank">“GettingStartedGuide.pdf”</a>
 <br/>Let’s start!
 <br/>First of all, download STREAMER framework + environment setup from 
-<br/><a href="https://github.com/streamer-framework/streamer">https://github.com/streamer-framework/streamer</a>
+<br/><a href="https://github.com/streamer-framework/streamer" target="_blank">https://github.com/streamer-framework/streamer</a>
 <br/>However, before we start the installation, you need to decide how you will use the framework. STREAMER is conceived to be used in two different ways (depending on your necessities):
 <br/>
 <ol>
@@ -62,16 +62,16 @@ In this case, you need to have in your computer the basic services STREAMER requ
 <h2>1) Getting ready for Deployment use</h2>
 <ol>
 	<li>In this case, you need to run the basic services that STREAMER requires. You can install them using the docker (recommended) following the steps of section 3.1, or install them yourself following section 4.</li>
-	<li>1- Install Eclipse (<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>) or the IDE you prefer.</li>
-	<li>2- Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
-	<li>3- [Optional] you are now ready to run our example use case: <br>
+	<li>Install Eclipse (<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>) or the IDE you prefer.</li>
+	<li>Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
+	<li>[Optional] you are now ready to run our example use case: <br>
 		Run from eclipse the main class ProducerMain to launch the data ingester, or from console:<br>
 		<strong>java ProducerMain</strong><br>
 		Run from eclipse the main class LauncherMain to launch the streaming pipeline, or from console.<br>
 		<strong>java LauncherMain</strong>
 
-	<li>4- Create your first use case in STREAMER by following the steps of section 6.</li>
-	<li>5- Run your application in STREAMER as section 5 shows.</li>
+	<li>Create your first use case in STREAMER by following the steps of section 6.</li>
+	<li>Run your application in STREAMER as section 5 shows.</li>
 </ol>
 <br/><br/>
 
@@ -138,10 +138,10 @@ If you started the framework without using (-d) property, first press (ctrl + c)
 <h2>4) Installing STREAMER services yourself (from sources)</h2>
 STREAMER use the following services that you can install yourself:<br/>
 [Compulsory]:<br/>
-- apache kafka / soft / Apache License 2.0 / kafka.version=2.12-2.3.0 <br/>
+- apache kafka / soft / Apache License 2.0 / kafka.version=2.6.0 <br/>
 - zookeeper / soft / Apache License 2.0 / zookeeper.version=3.4.14 
 <a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a> <br/>
-- redis server / soft / BSD / Redis version=5.0.5 <a href="https://redis.io/">https://redis.io/</a> <br/>
+- redis server / soft / BSD / Redis version=6.0.9 <a href="https://redis.io/">https://redis.io/</a> <br/>
 - influxdb / soft / MIT / version 1.7.7 <a href="https://portal.influxdata.com/">https://portal.influxdata.com/</a> <br/>
 <br/>
 [Optional]:<br/>
@@ -161,21 +161,14 @@ $ --broker-list hadoop1:6667<br/><br/>
 Sections below provide some guidelines to help you install the services yourself.<br/>
 <br/><br/>
 <h3>4.1	Manually installation in Linux</h3>
-<h4>Zookeeper</h4>
-1)	Download and install Zookeeper. 2 options:<br/>
-	1.a) $ sudo apt-get install zookeeper<br/>
-or<br/>
-	1.b) Download Zookeeper: <a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a><br/>
-2)	From command line, go to zookeeper/bin folder and run:<br/>
- $sudo zookeeper-server-start /etc/kafka/zookeeper.properties<br/>
-(Zookeeper is now running on localhost:2181)<br/>
+<h4>Zookeeper & Kafka</h4>
+1)	Download Zookeeper&Kafka from <a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a><br/>
+2)	From command line, go to kafka folder and run in 2 different windows and by order:<br/>
+ <strong>sudo bin/zookeeper-server-start.sh config/zookeeper.properties<br/>
+ sudo bin/kafka-server-start.sh config/server.properties</strong><br/>
+(They are now running on localhost)<br/>
 <br/>
-<h4>Kafka</h4>
-3)	Download and install conlfuent: <a href="http://docs.confluent.io/current/installation.html#installation-apt">http://docs.confluent.io/current/installation.html#installation-apt</a><br/>
-4)	Download Kafka and install it: <a href="https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-14-04</a><br/>
-5)	From command line, go to kafka/bin folder and run:<br/>
-$sudo kafka-server-start /etc/kafka/server.properties <br/>
-<br/>
+
 <h4>Redis</h4>
 6)	Download Redis : <a href="https://redis.io/download">https://redis.io/download</a> and install it<br/>
 7)	In Redis folder (where you installed it), go to folder "src" and run the command: $./redis-server<br/>
