@@ -280,7 +280,7 @@ e)	[arg5]. [Optional] Path from where to store/retrieve the trained model.<br/>
 <h2>6) How to Integrate your Algorithm in STREAMER</h2>
 In order to create your running application in STREAMER, two main phases are required:<br/>
 
-<h3> PHASE 1: INTEGRATE OR CREATE YOUR Algorithm</h3>
+<h3> PHASE 1: INTEGRATE OR CREATE YOUR ALGORITHM</h3>
 1)	We add the main algorithm class to the cea.streamer.algs package :<br/>
 a.	Implement both methods learn and run for training and testing phases (if necessary).<br/>
 b.	If your model is not coded in Java, you will have to use Redis as an intermediary data storage to save the arriving records to be accessible from the algorithm (in the example below, the algorithm is coded in Python).<br/>
@@ -355,7 +355,13 @@ As you arrived this far, it is time to run the application:<br/>
 	</div>
 </div>
 <div id="footer">
-	<p>&copy; CEA. All rights reserved. This framework was developed and published by SANDRA GARCIA-RODRIGUEZ & Mohammad ALSHAER.</p>
+	  <div class="column">
+		<p><strong>STREAMER</strong>: a Powerful Framework for Continuous Learning in Data Streams</p>  	
+		<p>&copy; CEA. All rights reserved. In collaboration with StreamOps project.</p>
+	  </div>
+	  <div class="column">
+		  <img src="images/logoCEAlist.jpeg" alt="Jane" style="width:10%" class="center">
+	  </div>
 </div>
 </body>
 </html>
