@@ -1,144 +1,196 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML>
 <!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
-
-Name       : Reciprocal 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20140119
-
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Varela+Round" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="customized-style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-<!--[if IE 6]>
-<link href="default_ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-</head>
-<body>
-<div id="wrapper">
-	<div id="header-wrapper" align="center" width="100%">
-		<div id="header" class="container">
-			<div id="logo" >
-				<h1><a href="./index.html">STREAMER</a></h1> <br>
-				<h2>a Powerful Framework for Continuous Learning in Data Streams</h2>
-			</div>
-		</div>
-		<div id="menu" class="container">
-			<ul>
-				<li><a href="./index.html" accesskey="1" title="">Homepage</a></li>
-				<li  class="current_page_item"><a href="./our-community.html" accesskey="3" title="">Our Community</a></li>
-				<li><a href="./contact-us.html" accesskey="5" title="">Contact Us</a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="page" class="container">
-		<h2> Who are we? </h2>
-		<p>Our community is formed by a group of AI researchers working for <a href="http://www-list.cea.fr/en/" target="_blank">CEA List</a> and their collaborators.</p>
-		<p> The creation and development of STREAMER is being supported by different collaborative projects and CEA List. </p>
-		<br>
-		<h2> Developers </h2>
-		<div class="row">
-		  <div class="column">
-			<div class="card">
-			  <img src="images/sandra.jpg" alt="Jane" style="width:40%" class="center">
-			  <div class="container">
-				<h3><strong>Sandra GARCIA-RODRIGUEZ</strong></h3>
-				<p>R & D Engineer/ Data Scientist</p>
-				<p><i>Machine Learning, Data Streams, <br/>Multi-objective Optimization, Multi-Agents Systems</i></p>
-				<p><a href="https://www.linkedin.com/in/sandra-garcia-rodriguez/" target="_blank">Linkedin profile</a></p>
-				<p><a href="https://scholar.google.com/citations?user=TfizzHwAAAAJ&hl=fr" target="_blank">Publications</a></p>
-				<p><a href="mailto:sandra.garciarodriguez@cea.fr">sandra.garciarodriguez@cea.fr</a></p>
-			  </div>
-			</div>
-		  </div>
+<html>
+	<head>
+		<title>STREAMER</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-		  <div class="column">
-			<div class="card">
-			  <img src="images/alshaer.jpg" alt="Mohammad" style="width:41%" class="center">
-			  <div class="container">
-				<h3><strong>Mohammad ALSHAER</strong></h3>
-				<p>R & D Engineer/ Data Scientist</p>
-				<p><i>Big Data, Machine Learning, Realtime Analysis, <br/> Time series Analysis</i></p>
-				<p><a href="https://www.linkedin.com/in/mohammad-alshaer/" target="_blank">Linkedin profile</a></p>
-				<p><a href="https://www.researchgate.net/profile/Mohammad_Alshaer" target="_blank">Publications</a></p>
-				<p><a href="mailto:mohammad.alshaer@cea.fr">mohammad.alshaer@cea.fr</a></p>					
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<br>
-		<h2> CEA </h2>
-		<p>The French Atomic Energy Commission (CEA) is a major European player in research, development and innovation. This technological research organisation is active in four main areas: energy, information technologies, health and defence. Located on the Saclay campus in the south of Ile de France, the <i>Laboratoire d'Intégration des Systèmes et des Technologies</i> (LIST) designs intelligent digital systems. Its 750 employees support 200 French and foreign companies every year on applied research projects in four areas: Advanced Manufacturing, Embedded Systems, Data Intelligence and Radiation Control for Health. The CEA LIST teams are also partners with numerous university laboratories, « grandes écoles » and other research organisations through collaborative research projects. They are part of DIGITEO LABS, a scientific campus which brings together more than 1200 researchers specialised in information technologies (CEA, INRIA, CNRS, Supélec, Ecole Polytechnique, Université d'Orsay). Within this institute, the SID (Data Intelligence Service) develops Artificial Intelligence solutions for decision support, user-oriented and automatic supervision of complex systems. 
-		</p>
-<br>
-		<p><h2> Collaborative projects </h2></p>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-		<p><strong>Stream-Ops</strong> (funded by DataIA): The technological advance in sensors and the development of IoT (Internet of Things) generate a growing number of space-time data to be processsed and analyzed. Karine Zeitouni, Yehia Taher (<i>DAVID Laboratory, Versailles Saint-Quentin-en-Yvelines University</i>), Sandra Garcia Rodriguez, Mohammad Alshaer, and Cédric Gouy-Pailler (<i>Laboratory of Data Analysis and Systems Intelligence, CEA List</i>) decided to join their skills to propose to the scientific community a new, simple tool for developing powerful Machine learning and artificial intelligence algorithms that can handle data flow problems. This tool will apply in particular in the medical field in collaboration with Philippe Aegerter (Inserm UMR 1168) and Marc Fischler (Foch Hospital, Versailles Saint-Quentin-en-Yvelines University).  <a href="https://dataia.eu/actualites/streamops-une-plateforme-de-streaming-robuste-performante-et-facilement-extensible" target="_blank">Link</a></p>
+				<!-- Header -->
+					<header id="header">
+						<h1>STREAMER</h1>
+						<p>a Powerful and Open-Source Framework for Continuous Learning in Data Streams<br />
+					</header>
 
-		<p><strong>SmartWater4Europe</strong>(SW4EU): The SmartWater4Europe project puts in place smart solutions for water distribution, water quality monitoring, leak detection and energy optimization. CEA List intervened in the INCOM and Bio-SMART projects, which are respectively focusing on early leakage detection and early contamination (chlorine concentration) detection, by developing statistical detection algorithms. CEA also contributed to this project with the creation of STREAMER, where those algorithms were tested reproducing the realistic streaming context.
- <a href="https://sw4eu.com" target="_blank">Link</a></p>
+				<!-- Nav -->
+					<div class="topnav font-spec" style="display:none">
+					  <a href="#home" class="active">Our Community</a>
+						<div id="myLinks">
+							<a href="./index.html" accesskey="1" title="">Homepage</a>
+							<a href="./contact-us.html" accesskey="5" title="">Contact Us</a>
+						</div>
+						  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+						<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+					<nav id="nav">
+						<ul>
+							<!--<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">First Section</a></li>
+							<li><a href="#second">Second Section</a></li>
+							<li><a href="#cta">Get Started</a></li>-->
+							<li><a href="./index.html" accesskey="1" title="">Homepage</a></li>
+							<li  class="current_page_item"><a href="./our-community.html" accesskey="3" title="">Our Community</a></li>
+							<li><a href="./contact-us.html" accesskey="5" title="">Contact Us</a></li>
+						</ul>
+					</nav>
 
+				<!-- Main -->
+					<div id="main">
 
-	</div>
-	<div id="portfolio-wrapper">
-		<div id="portfolio" class="container">
-			<div class="title">
-				<h2>STREAMER</h2>
-				<h3><span class="byline"><strong>a Powerful Framework for Continuous Learning in Data Streams</strong></span></h3>
-			</div>
-			<div class="column1">
-				<div class="box">
-					<span class="icon icon-download-alt"></span>
-					<h3>Latest release<br> (source code & environment)</h3>
-					<a href="https://github.com/streamer-framework/streamer" target="_blank" class="button">Link</a>  
-				</div>
-			</div>
-			<div class="column2">
-				<div class="box">
-					<span class="icon icon-magic"></span>
-					<h3>Quick Start</h3>
-					<a href="./getting-started.html" class="button">Link</a>  
-				</div>
-			</div>
-			<div class="column3">
-				<div class="box">
-					<span class="icon icon-book"></span>
-					<h3>STREAMER Guide</h3>
-					<a href="./docs/UserGuideSTREAMER.pdf" target="_blank" class="button">Link</a>  
-				</div>
-			</div>
-			<div class="column4">
-				<div class="box">
-					<span class="icon icon-comments"></span>
-					<h3>Contact</h3>
-					<p><b>Sandra GARCIA-RODRIGUEZ</b>
-					<br><a href="mailto:sandra.garciarodriguez@cea.fr">sandra.garciarodriguez@cea.fr</a></p>
-					<p><b>Mohammad ALSHAER</b>
-					<br><a href="mailto:mohammad.alshaer@cea.fr">mohammad.alshaer@cea.fr</a></p>
-				</div>
+						<!-- Content -->
+							<section id="content" class="main">
+								<h2> Who are we? </h2>
+								<p>Our community is formed by a group of AI researchers working for <a href="http://www-list.cea.fr/en/" target="_blank">CEA List</a> and their collaborators.</p>
+								<p> The creation and development of STREAMER is being supported by different collaborative projects and CEA List. </p>
+								<br>
+								<h2> Developers </h2>
+								<div class="row">
+								  <div class="column">
+									<div class="card">
+									  <div class="colored-box" height=200px>
+									  <img src="images/sandra.jpg" alt="Jane" style="width:50%;border-radius: 90%;" class="center">
+									  </div>
+									  <div class="container">
+										<h3><strong>Sandra GARCIA-RODRIGUEZ</strong></h3>
+										<p>R & D Engineer/ Data Scientist</p>
+										<p><i>Machine Learning, Data Streams, <br/>Multi-objective Optimization, Multi-Agents Systems</i></p>
+										<p><a href="https://www.linkedin.com/in/sandra-garcia-rodriguez/" target="_blank">Linkedin profile</a></p>
+										<p><a href="https://scholar.google.com/citations?user=TfizzHwAAAAJ&hl=fr" target="_blank">Publications</a></p>
+										<p><a href="mailto:sandra.garciarodriguez@cea.fr">sandra.garciarodriguez@cea.fr</a></p>
+									  </div>
+									</div>
+								  </div>
+
+								  <div class="column">
+									<div class="card">
+									  <div class="colored-box" height=200px>
+									  <img src="images/alshaer.jpg" alt="Mohammad" style="width:51%;border-radius: 90%;" class="center">
+									  </div>
+									  <div class="container">
+										<h3><strong>Mohammad ALSHAER</strong></h3>
+										<p>R & D Engineer/ Data Scientist</p>
+										<p><i>Big Data, Machine Learning, Realtime Analysis, <br/> Time series Analysis</i></p>
+										<p><a href="https://www.linkedin.com/in/mohammad-alshaer/" target="_blank">Linkedin profile</a></p>
+										<p><a href="https://www.researchgate.net/profile/Mohammad_Alshaer" target="_blank">Publications</a></p>
+										<p><a href="mailto:mohammad.alshaer@cea.fr">mohammad.alshaer@cea.fr</a></p>					
+									  </div>
+									</div>
+								  </div>
+								</div>
+							</section>
+							<section id="cea" class="main">
+								<h2> CEA </h2>
+								<p>The French Atomic Energy Commission (CEA) is a major European player in research, development and innovation. This technological research organisation is active in four main areas: energy, information technologies, health and defence. Located on the Saclay campus in the south of Ile de France, the <i>Laboratoire d'Intégration des Systèmes et des Technologies</i> (LIST) designs intelligent digital systems. Its 750 employees support 200 French and foreign companies every year on applied research projects in four areas: Advanced Manufacturing, Embedded Systems, Data Intelligence and Radiation Control for Health. The CEA LIST teams are also partners with numerous university laboratories, « grandes écoles » and other research organisations through collaborative research projects. They are part of DIGITEO LABS, a scientific campus which brings together more than 1200 researchers specialised in information technologies (CEA, INRIA, CNRS, Supélec, Ecole Polytechnique, Université d'Orsay). Within this institute, the SID (Data Intelligence Service) develops Artificial Intelligence solutions for decision support, user-oriented and automatic supervision of complex systems. 
+								</p>
+								<p><h2> Collaborative projects </h2></p>
+
+								<p><strong>Stream-Ops</strong> (funded by DataIA): The technological advance in sensors and the development of IoT (Internet of Things) generate a growing number of space-time data to be processsed and analyzed. Karine Zeitouni, Yehia Taher (<i>DAVID Laboratory, Versailles Saint-Quentin-en-Yvelines University</i>), Sandra Garcia Rodriguez, Mohammad Alshaer, and Cédric Gouy-Pailler (<i>Laboratory of Data Analysis and Systems Intelligence, CEA List</i>) decided to join their skills to propose to the scientific community a new, simple tool for developing powerful Machine learning and artificial intelligence algorithms that can handle data flow problems. This tool will apply in particular in the medical field in collaboration with Philippe Aegerter (Inserm UMR 1168) and Marc Fischler (Foch Hospital, Versailles Saint-Quentin-en-Yvelines University).  <a href="https://dataia.eu/actualites/streamops-une-plateforme-de-streaming-robuste-performante-et-facilement-extensible" target="_blank">Link</a></p>
+
+								<p><strong>SmartWater4Europe</strong>(SW4EU): The SmartWater4Europe project puts in place smart solutions for water distribution, water quality monitoring, leak detection and energy optimization. CEA List intervened in the INCOM and Bio-SMART projects, which are respectively focusing on early leakage detection and early contamination (chlorine concentration) detection, by developing statistical detection algorithms. CEA also contributed to this project with the creation of STREAMER, where those algorithms were tested reproducing the realistic streaming context.
+						 <a href="https://sw4eu.com" target="_blank">Link</a></p>
+							</section>
+							<section id="main_links" class="main special">
+								<h2>STREAMER</h2>
+								<h3><span class="byline"><strong>a Powerful and Open-Source Framework for Continuous Learning in Data Streams</strong></span></h3>
+
+								<ul class="features">
+									<li>
+										<span class="icon solid major style2 fa fa-download"></span>
+										<h3>Latest release</h3><small>(source code+environment)</small>
+										<br/><br/>
+										<a href="https://github.com/streamer-framework/streamer" target="_blank" class="button primary small main_color">Link</a>
+										
+									</li>
+									<li>
+										<span class="icon major style4 fa fa-magic"></span>
+										<h3>Quick Start</h3>
+										<br/>
+										<br/>
+										<a href="./getting-started.html" class="button primary small main_color">Link</a>
+									</li>
+									<li>
+										<span class="icon major style1 fa fa-book"></span>
+										<h3>STREAMER GUIDE</h3>
+										<br/>
+										<br/>
+										<a href="./docs/UserGuideSTREAMER.pdf" target="_blank" class="button primary small main_color">Link</a>
+									</li>
+									<li>
+										<span class="icon major style5 fa fa-comments"></span>
+										<h3>Contact</h3>
+										<p><b>Sandra GARCIA-RODRIGUEZ</b>
+										<br><a href="mailto:sandra.garciarodriguez@cea.fr">sandra.garciarodriguez@cea.fr</a>
+										<b>Mohammad ALSHAER</b>
+										<br><a href="mailto:mohammad.alshaer@cea.fr">mohammad.alshaer@cea.fr</a></p>
+									</li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!--<section>
+							<h2>Aliquam sed mauris</h2>
+							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Etiam feugiat</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd>
+								<dt>Email</dt>
+								<dd><a href="#">information@untitled.tld</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>-->
+							
+							  <section>
+								<p><strong>STREAMER</strong>: a Powerful and Open-Source Framework for Continuous Learning in Data Streams</p>  	
+								<p class="copyright">&copy; CEA. All rights reserved. In collaboration with StreamOps project.</p>
+							  </section>
+							  <section>
+								<div style="text-align: center;">
+								  <img src="images/logoCEAlist.jpeg" alt="Jane" style="width:25%" class="center">
+								</div>
+							  </section>
+					</footer>
+
 			</div>
 
-		</div>
-	</div>
-</div>
-<div id="footer">
-	  <div class="column">
-		<p><strong>STREAMER</strong>: a Powerful Framework for Continuous Learning in Data Streams</p>  	
-		<p>&copy; CEA. All rights reserved. In collaboration with StreamOps project.</p>
-	  </div>
-	  <div class="column">
-		  <img src="images/logoCEAlist.jpeg" alt="Jane" style="width:10%" class="center">
-	  </div>
-</div>
-</body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
