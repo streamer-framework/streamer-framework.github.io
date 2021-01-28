@@ -11,6 +11,9 @@
 	background-color: lightgoldenrodyellow!important;
 }
 
+section a {
+	color: darkgoldenrod;
+}
 /*#nav ul li a:hover{
 	background-color: #935d8c!important;
 }
