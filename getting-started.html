@@ -73,9 +73,9 @@ In this case, you need to have in your computer the basic services STREAMER requ
 	<li>Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
 	<li>[Optional] you are now ready to run our example use case: <br>
 		Run from eclipse the main class ProducerMain to launch the data ingester, or from console:<br>
-		<pre><code>java ProducerMain</code></pre>
+		<pre><code>java -cp target/streamer-1.0.0-test-jar-with-dependencies.jar cea.ProducerMain [setup_folder]</code></pre>
 		Run from eclipse the main class LauncherMain to launch the streaming pipeline, or from console.<br>
-		<pre><code>java LauncherMain</code></pre>
+		<pre><code>java -cp target/streamer-1.0.0-test-jar-with-dependencies.jar cea.LauncherMain [setup_folder]</code></pre>
 
 	<li>Create your first use case in STREAMER by following the steps of section 6.</li>
 	<li>Run your application in STREAMER as section 5 shows.</li>
