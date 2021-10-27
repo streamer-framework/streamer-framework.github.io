@@ -13,7 +13,10 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
+			<div style="background-color:lightgray;height:50px;">
+				<img src="images/logoCEAList.svg" style="height:45px;vertical-align:middle;">
+				<img src="images/logoCarnot.svg" style="height: 45px;vertical-align: middle;">
+			</div>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -50,8 +53,8 @@
 						<!-- Content -->
 							<section id="content" class="main">
 <h2> Getting Started </h2>
-Welcome to STREAMER! This guide will show you how to easily install and run your first use case with STREAMER. No worries, the process is straightforward. (For a detailed presentation of STREAMER read the <a href="./docs/UserGuideSTREAMER.pdf" target="_blank">“UserGuide.pdf”</a>.)
-<br/>Here, the installation of STREAMER is presented in breif. For the detailed installation guide of STREAMER, read the <a href="./docs/GettingStartedGuideSTREAMER.pdf" target="_blank">“GettingStartedGuide.pdf”</a>
+Welcome to STREAMER! This guide will show you how to easily install and run your first use case with STREAMER. No worries, the process is straightforward. (For a detailed presentation of STREAMER read the <a href="./docs/UserGuideSTREAMER_v2.0.pdf" target="_blank">“UserGuide_v2.0.pdf”</a>.)
+<br/>Here, the installation of STREAMER is presented in breif. For the detailed installation guide of STREAMER, read the <a href="./docs/GettingStartedGuideSTREAMER_v2.0.pdf" target="_blank">“GettingStartedGuide_v2.0.pdf”</a>
 <br/>Let’s start!
 <br/>First of all, download STREAMER framework + environment setup from 
 <br/><a href="https://github.com/streamer-framework/streamer" target="_blank">https://github.com/streamer-framework/streamer</a>
@@ -143,6 +146,13 @@ To stop the services, use the following command: <br/>
 If you started the framework without using (-d) property, first press (ctrl + c) and then the following (with (-d) or not):
 <pre><code>docker-compose down</code></pre>
 <br/>
+To check the logs: <br/>
+Get the container Id corresponding to the container name: "streamer_environment_streamer" using the following command:
+<pre><code>docker ps</code></pre>
+Then use that Id to access the container using the following command:
+<pre><code>docker exec -it <b>container_id</b> bash</code></pre>
+Then you can check the logs by accessing the logs folder using:
+<pre><code>cd logs</code></pre>
 
 <h2>4) Installing STREAMER services yourself (from sources)</h2>
 STREAMER use the following services that you can install yourself:<br/>
@@ -150,12 +160,13 @@ STREAMER use the following services that you can install yourself:<br/>
 - apache kafka / soft / Apache License 2.0 / kafka.version=2.7.0 <br/>
 - zookeeper / soft / Apache License 2.0 / zookeeper.version=3.5.9
 <a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a> <br/>
-- redis server / soft / BSD / Redis version=6.0.9 <a href="https://redis.io/">https://redis.io/</a> <br/>
-- influxdb / soft / MIT / version 1.8.3 <a href="https://portal.influxdata.com/">https://portal.influxdata.com/</a> <br/>
+or apache kafka & zookeeper confluent 6.2.1 <br />
+- redis server / soft / BSD / Redis version=6.2 <a href="https://redis.io/">https://redis.io/</a> <br/>
+- influxdb / soft / MIT / version=1.8.9 <a href="https://portal.influxdata.com/">https://portal.influxdata.com/</a> <br/>
 <br/>
 [Optional]:<br/>
-- elasticsearch / soft / Apache License 2.0 / version=7.10.1 <a href="https://www.elastic.co/">https://www.elastic.co/</a>  <br/>
-- kibana / soft / Elastic License/Apache License / version=7.10.1 <a href="https://www.elastic.co/kibana">https://www.elastic.co/kibana</a> <br/>
+- elasticsearch / soft / Apache License 2.0 / version=7.15.0 <a href="https://www.elastic.co/elasticsearch">https://www.elastic.co/elasticsearch</a>  <br/>
+- kibana / soft / Elastic License/Apache License / version=7.15.0 <a href="https://www.elastic.co/kibana">https://www.elastic.co/kibana</a> <br/>
 <br/>
 <h2>5) How to run a STREAMER use case</h2>
 1)	Set up all the properties in the files .props within src/main/resources.<br/>
@@ -225,7 +236,7 @@ As you arrived this far, it is time to run the application:<br/>
 								<ul class="features">
 									<li>
 										<span class="icon solid major style2 fa fa-download"></span>
-										<h3>Latest release</h3><small>(source code+environment)</small>
+										<h3>Latest release</h3><h5 style="color: red!important;font-weight: 700;margin: 0;">Release v2.0</h5><small>(source code+environment)</small>
 										<br/><br/>
 										<a href="https://github.com/streamer-framework/streamer" target="_blank" class="button primary small main_color">Link</a>
 										
@@ -242,7 +253,7 @@ As you arrived this far, it is time to run the application:<br/>
 										<h3>STREAMER Guide</h3>
 										<br/>
 										<br/>
-										<a href="./docs/UserGuideSTREAMER.pdf" target="_blank" class="button primary small main_color">Link</a>
+										<a href="./docs/UserGuideSTREAMER_v2.0.pdf" target="_blank" class="button primary small main_color">Link</a>
 									</li>
 									<li>
 										<span class="icon major style5 fa fa-comments"></span>
