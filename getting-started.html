@@ -54,25 +54,25 @@
 						<!-- Content -->
 							<section id="content" class="main">
 <h2> Getting Started </h2>
-Welcome to STREAMER! This guide will show you how to easily install and run your first use case with STREAMER. No worries, the process is straightforward. (For a detailed presentation of STREAMER read the <a href="./docs/UserGuideSTREAMER_v2.0.pdf" target="_blank">“UserGuide_v2.0.pdf”</a>.)
-<br/>Here, the installation of STREAMER is presented in breif. For the detailed installation guide of STREAMER, read the <a href="./docs/GettingStartedGuideSTREAMER_v2.0.pdf" target="_blank">“GettingStartedGuide_v2.0.pdf”</a>
-<br/>Let’s start!
-<br/>First of all, download STREAMER framework + environment setup from 
-<br/><a href="https://github.com/streamer-framework/streamer" target="_blank">https://github.com/streamer-framework/streamer</a>
-<br/>However, before we start the installation, you need to decide how you will use the framework. STREAMER is conceived to be used in two different ways (depending on your necessities):
-<br/>
+Welcome to STREAMER! This guide will show you how to easily install and run your first use case with STREAMER. No worries, the process is straightforward. (For a detailed presentation of STREAMER read the <a href="https://github.com/streamer-framework/streamer/blob/main/UserGuideSTREAMER.pdf" target="_blank">“UserGuide.pdf”</a>.)
+<br>Here, the installation of STREAMER is presented in breif. For the detailed installation guide of STREAMER, read the <a href="https://github.com/streamer-framework/streamer/blob/main/GettingStartedGuideSTREAMER.pdf" target="_blank">“GettingStartedGuide.pdf”</a>
+<br>Let’s start!
+<br>First of all, download STREAMER framework + environment setup from 
+<br><a href="https://github.com/streamer-framework/streamer" target="_blank">https://github.com/streamer-framework/streamer</a>
+<br>However, before we start the installation, you need to decide how you will use the framework. STREAMER is conceived to be used in two different ways (depending on your necessities):
+<br>
 <ol>
 	<li><b>Development use:</b> (oriented to data scientists). You are interested on directly working on the code of the framework to add/develop several functionalities and test them.</li>
 	<li><b>Product use:</b> : (oriented to industrial use). You want to use the framework as a product (no need to get in contact with the code but execute STREAMER). 
 In this case, you need to have in your computer the basic services STREAMER requires and STREAMER instance already packed.
 </li>
 </ol>
-<br/><br/>
+<br><br>
 
 
 <h2>1) Getting ready for Deployment use</h2>
 <ol>
-	<li>In this case, you need to run the basic services that STREAMER requires. You can install them using the docker (recommended) following the steps of section 3.1, or install them yourself following section 4.</li>
+	<li>Run the basic services that STREAMER requires. You can install them using the docker (recommended) following the steps of section 3.1, or install them yourself following section 4.</li>
 	<li>Install Eclipse (<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>) or the IDE you prefer.</li>
 	<li>Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
 	<li>[Optional] you are now ready to run our example use case: <br>
@@ -92,23 +92,22 @@ for running our use case example or our proposed algorithms do not forget instal
 <ul>- R (services/requirementsR.txt):<br>
 <pre><code>install.packages(c("caret","RCurl","rredis", "kernlab", "e1071", "neuralnet","xgboost"))</code></pre></ul>
 </ol>
-<br/><br/>
+<br>
 
 <h2>2) Getting ready for Production use</h2>
 Try our example use case in STREAMER by following the steps of Section 3.
-<br/><br/>
+<br><br>
 
 
 <h2>3) Using Docker</h2>
 We make simple and transparent the installation of STREAMER and its services by using Docker. We provide 2 docker files that serve to: 
 <ol>
-	<li><b>Services environment</b> (section 3.1): it contains all the services used by the framework (Kafka & Zookeeper, Redis. InfluxDB, Kibana & ElasticSearch).</li>
-	<li><b>Production environment</b> (section 3.2): it contains STREAMER for production purpose.</li>
+	<li><b>Services environment</b>: it contains all the services used by the framework (Kafka & Zookeeper, Redis. InfluxDB, Kibana & ElasticSearch).</li>
+	<li><b>Production environment</b>: it contains STREAMER for production purpose.</li>
 </ol>
-<br/>
 <h3>3.1	Install & run all the services from Docker (recommended)</h3>
  [Warning]: for Linux based systems, you may need to run all the commands in “sudo” mode as, for instance, “sudo docker-compose up --build -d “.
-<br/>
+<br>
 Follow the following steps to set all necessary services before running STREAMER:
 <ol>
 	<li>Install docker on your machine. At the following link, you will find how to install the docker for all the different operating systems (Windows, Linux, Mac): <a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a></li>
@@ -118,21 +117,21 @@ Follow the following steps to set all necessary services before running STREAMER
 	<li>Run the following command to start the services:<pre><code>docker-compose up --build -d</code></pre></li>
 </ol>
 
-In order to check if the services are running properly, check the following command: <br/>
+In order to check if the services are running properly, check the following command: <br>
 <pre><code>docker ps</code></pre>
-To stop the services, use the following command: <br/>
+To stop the services, use the following command: <br>
 <pre><code>docker-compose down</code></pre>
-Note: If after following the previous steps, you face a similar error to <br/>
+Note: If after following the previous steps, you face a similar error to <br>
 ERROR: [1] bootstrap checks failed [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
-<br/>you can solve it by increasing your virtual memory. Run the command: 
+<br>you can solve it by increasing your virtual memory. Run the command: 
 <pre><code>sudo sysctl -w vm.max_map_count=262144</code></pre>
 and then build the docker again with:
-<pre><code>sudo docker-compose up --build –d</code></pre>
+<pre><code>sudo docker-compose up --build -d</code></pre>
 
 <h3>3.2	Running STREAMER in production environment</h3>
 
 [Warning]: for Linux based systems, you may need to run all the commands in “sudo” mode as, for instance, sudo docker-compose up --build -d.
-<br/>
+<br>
 <ol>
 <li>Before running STREAMER for production purpose, complete all the steps of case 1 above to run all the services.</li>
 <li>Open a terminal and go to directory “streamer_environment/streamer_environment” directory (sub-folder of streamer_environment folder).</li>
@@ -143,11 +142,11 @@ If you add (-d) to the command above, it should start in the background. In case
 
 In order to check if the framework is running properly, check the following command:
 <pre><code>docker ps</code></pre>
-To stop the services, use the following command: <br/>
+To stop the services, use the following command: <br>
 If you started the framework without using (-d) property, first press (ctrl + c) and then the following (with (-d) or not):
 <pre><code>docker-compose down</code></pre>
-<br/>
-To check the logs: <br/>
+
+To check the logs: <br>
 Get the container Id corresponding to the container name: "streamer_environment_streamer" using the following command:
 <pre><code>docker ps</code></pre>
 Then use that Id to access the container using the following command:
@@ -156,76 +155,141 @@ Then you can check the logs by accessing the logs folder using:
 <pre><code>cd logs</code></pre>
 
 <h2>4) Installing STREAMER services yourself (from sources)</h2>
-STREAMER use the following services that you can install yourself:<br/>
-[Compulsory]:<br/>
-- apache kafka & zookeeper/ soft / Apache License 2.0 / kafka.version 7.3.0 <a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a> <br/>
-- redis server / soft / BSD / Redis version 7.0.5 <a href="https://redis.io/">https://redis.io/</a> <br/>
-- influxdb / soft / MIT / version 1.8.10 <a href="https://portal.influxdata.com/">https://portal.influxdata.com/</a> <br/>
-<br/>
-[Optional]:<br/>
-- elasticsearch / soft / Apache License 2.0 / version 7.17.0 <a href="https://www.elastic.co/elasticsearch">https://www.elastic.co/elasticsearch</a>  <br/>
-- kibana / soft / Elastic License/ Apache License / version 7.17.0 <a href="https://www.elastic.co/kibana">https://www.elastic.co/kibana</a> <br/>
-<br/>
-<h2>5) How to run a STREAMER use case</h2>
-1)	Set up all the properties in the files .props within src/main/resources.<br/>
-<br/>
-2)	For using the data producer simulator functionality, run ProducerMain.java (placed in folder streamer/src/test/java/cea/streamer):
-ProducerMain.java [origin1 … originN] <br/>
-
-A producer is now writing in Kafka topic(s).
-[origin1 … originN] Arguments are optional. Each of them runs a problem in a separate process; its name originX indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.
-<br/><br/>
-3)	For using the streaming pipeline functionality, run LauncherMain.java (placed in folder  streamer\src\test\java\cea\streamer) as:
-LauncheMain.java [origin1 … originN]
-<br/>
-[origin1 … originN] Arguments are optional. Each of them runs a problem in a separate process; its name originX indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.
-<br/><br/>
-4)	For using the learning API in offline mode (algorithms test and/or train) run AlgInvokerMain_offline.java (placed in folder streamer\src\test\java\cea\streamer) as
-AlgInvoker_Main.java arg1 arg2 arg3 arg4 [arg5]
-<br/>
-Arguments are:<br/>
-a)	arg1. Data source type: From where data must be retrieved. Option: [influx or file]. It could be either “influx” to build the model using the data stored in InfluxDB or “file” to directly use the data from the file specify in algs.properties (data.training).<br/>
-b)	arg2. Origin: [influx-data-base-name or origin]. origin indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.<br/>
-c)	arg3. Perform training [true or false] (train).<br/>
-d)	arg4. Perform model running [true or false] (test).<br/>
-e)	[arg5]. [Optional] Path from where to store/retrieve the trained model.<br/>
-<br/><br/>
-5)	For using kibana graphical interface open a web browser and type http://localhost:5601. The dashboard will appear.<br/>
-<br/><br/>
+STREAMER use the following services that you can install yourself:<br>
+[Compulsory]:<br>
+- apache kafka & zookeeper/ soft / Apache License 2.0 / kafka.version 7.3.0 <a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a> <br>
+- redis server / soft / BSD / Redis version 7.0.5 <a href="https://redis.io/">https://redis.io/</a> <br>
+- influxdb / soft / MIT / version 1.8.10 <a href="https://portal.influxdata.com/">https://portal.influxdata.com/</a> <br>
+<br>
+[Optional]:<br>
+- elasticsearch / soft / Apache License 2.0 / version 7.17.0 <a href="https://www.elastic.co/elasticsearch">https://www.elastic.co/elasticsearch</a>  <br>
+- kibana / soft / Elastic License/ Apache License / version 7.17.0 <a href="https://www.elastic.co/kibana">https://www.elastic.co/kibana</a> <br>
+<br>
 
 
-<h2>6) How to Integrate your Algorithm in STREAMER</h2>
-In order to create your running application in STREAMER, two main phases are required:<br/>
+<h2>5) How to run STREAMER</h2>
+	<h3>5.1) For a classical use of STREAMER</h3>
+		1)	Set up all the properties in the files .props within src/main/resources.<br><br>
+		2)	For using the data producer simulator functionality, run ProducerMain.java (placed in folder streamer/src/test/java/cea/streamer):
+		<i>ProducerMain.java [origin1 … originN]</i> <br>
 
-<h3> PHASE 1: INTEGRATE OR CREATE YOUR ALGORITHM</h3>
-1)	We add the main algorithm class to the cea.streamer.algs package :<br/>
-a.	Implement both methods learn and run for training and testing phases (if necessary).<br/>
-b.	If your model is not coded in Java, you will have to use Redis as an intermediary data storage to save the arriving records to be accessible from the algorithm (in the example below, the algorithm is coded in Python).<br/>
-<br/>
-2)	Add the training and testing python files to the path src/main/resources/algs<br/>
-a.	While coding the algorithms in Python, pay attention for the training file to read the data from Redis, and write the model in Redis.<br/>
-b.	Likewise, for the testing file, pay attention to read the data and the model from Redis, and write the predictions as one line String in Redis and precise the separator used between the predictions’ values in another redis key. These predictions are read by the framework in order to do the realtime evaluation of the model’s performance.<br/>
-<br/>
+		A producer is now writing in Kafka topic(s).
+		[origin1 … originN] Arguments are optional. Each of them runs a problem in a separate process; its name originX indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.
+		<br><br>
+		3)	For using the streaming pipeline functionality, run LauncherMain.java (placed in folder  streamer\src\test\java\cea\streamer) as:
+		<i>LauncheMain.java [origin1 … originN]</i>
+		<br>
+		[origin1 … originN] Arguments are optional. Each of them runs a problem in a separate process; its name originX indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.
+		<br><br>
+		4)	For using the learning API in offline mode (algorithms test and/or train) run AlgInvokerMain_offline.java (placed in folder streamer\src\test\java\cea\streamer) as
+		<i>AlgInvoker_Main.java arg1 arg2 arg3 arg4 [arg5]</i>
+		<br>
+		Arguments are:<br>
+		a)	arg1. Data source type: From where data must be retrieved. Option: [influx or file]. It could be either “influx” to build the model using the data stored in InfluxDB or “file” to directly use the data from the file specify in algs.properties (data.training).<br>
+		b)	arg2. Origin: [influx-data-base-name or origin]. origin indicates the folder where the properties files are located for this specific execution. If no arguments indicated, the system considers the properties files directly placed in src/main/resources/setup folder.<br>
+		c)	arg3. Perform training [true or false] (train).<br>
+		d)	arg4. Perform model running [true or false] (test).<br>
+		e)	[arg5]. [Optional] Path from where to store/retrieve the trained model.<br>
+		<br>
+		5)	For using kibana graphical interface open a web browser and type http://localhost:5601. The dashboard will appear.<br>
+		<br>
 
-<h3> PHASE 2: INTEGRATE OR CREATE USE CASE APPLICATION</h3>
-1)	Add a folder with the project name<br/>
-2)	Add two configuration files to this folder:<br/>
-a.	Algs.props<br/>
-b.	Streaming.props<br/>
+	<h3>5.2) For a distributed environment of STREAMER</h3>
+		1) Set up all the properties in the files .props within src/main/resources.<br><br>
+		2) Launch a server by running ServerLauncher.java (placed in folder streamer/src/federated) with the following arguments: <i>ServerLauncher.java [origin] </i> <br>
+		’origin’ argument is optional. It indicates the folder where the properties	files are located for this server execution. If no argument is indicated,
+		the system considers the properties file of the distributed learning module	demo, directly placed in src/main/resources/setup/cmapss/server folder. <br><br>
+		3) Launch an online or offline client by:<br>
+			(a) running a classic STREAMER instance (for an online client) as in section 5.1 (steps 1 to 3). The ’distributedMode’ property should be
+			set to ’true’ in the <i>federated.props</i> file.<br>
+			(b) running ClientLauncher.java (for offline client(s), placed in folder streamer/src/federated) with the following arguments: <i>ClientLauncher.java [origin1 ... originN]</i><br>
+			[origin1 ... originN] arguments are optional. Each of them runs an offline client in a separate process; its name originX indicates the
+			folder where the properties files are located for this specific execution. If no argument is indicated, the system considers the properties
+			files of the distributed learning module demo, directly placed in src/main/resources/setup/cmapss/client 0 folder.<br><br>
+		4) Repeat step 3 to launch as many offline or online clients as you want.<br><br>
 
-Note: The user can choose metrics for evaluating the model by simply adding the name of the metric class. It is also possible for the user to extend the existing metrics with new ones.<br/>
-3)	Create the record class:<br/> 
-a.	It is essential to name the record class in this exact way:<br/> 
-problem.type + “Record” + “.java”<br/> 
-b.	You can precise the headers of the dataset<br/> 
-c.	Implement the fill method to indicate how the records should be filled with the correct values.<br/> 
-d.	In case the dataset does not contain timestamp, use sleep and generate a new timestamp.<br/> 
-<br/>
-<br/>
-As you arrived this far, it is time to run the application:<br/>
-<pre><code>cmd1> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.LauncherMain kdd-cup-99</code></pre>
-<pre><code>cmd2> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.ProducerMain kdd-cup-99</code></pre>
+		<u>Note:</u> You can launch several clients at the beginning of an FL experience and then launch new clients or disconnect existing ones at any time during the experience.
 
+<h2>6) How to Integrate use case + algorithm in STREAMER</h2>
+
+	<h3>6.1) For a classical use of STREAMER</h3>
+
+	In order to create your running application in STREAMER, two main phases are required:<br>
+
+		<h3> PHASE 1: INTEGRATE OR CREATE YOUR ALGORITHM</h3>
+			1)	Add the main algorithm class to the cea.streamer.algs package :<br>
+			a.	Implement both methods learn and run for training and testing phases (if necessary).<br>
+			b.	If your model is not coded in Java, you will have to use Redis as an intermediary data storage to save the arriving records to be accessible from the algorithm (in the example below, the algorithm is coded in Python).<br>
+			<br>
+			2)	Add the training and testing python files to the path src/main/resources/algs<br>
+			a.	While coding the algorithms in Python, pay attention for the training file to read the data from Redis, and write the model in Redis.<br>
+			b.	Likewise, for the testing file, pay attention to read the data and the model from Redis, and write the predictions as one line String in Redis and precise the separator used between the predictions’ values in another redis key. These predictions are read by the framework in order to do the realtime evaluation of the model’s performance.<br>
+			<br>
+
+		<h3> PHASE 2: INTEGRATE OR CREATE YOUR USE CASE APPLICATION</h3>
+			1)	Add a folder with the project name<br><br>
+			2)	Add two configuration files to this folder:<br>
+			a.	<i>Algs.props</i><br>
+			b.	<i>Streaming.props</i><br>
+
+			Note: The user can choose metrics for evaluating the model by simply adding the name of the metric class. It is also possible for the user to extend the existing metrics with new ones.<br><br>
+			3)	Create the record class:<br> 
+			a.	It is essential to name the record class in this exact way:<br> 
+			problem.type + “Record” + “.java”<br> 
+			b.	You can precise the headers of the dataset<br> 
+			c.	Implement the fill method to indicate how the records should be filled with the correct values.<br> 
+			d.	In case the dataset does not contain timestamp, use sleep and generate a new timestamp.<br> 
+			<br>
+			<br>
+			As you arrived this far, it is time to run the application:<br>
+			<pre><code>cmd1> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.LauncherMain kdd-cup-99</code></pre>
+			<pre><code>cmd2> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.ProducerMain kdd-cup-99</code></pre>
+
+
+	<h3>6.2) For a distributed environment of STREAMER</h3>
+		In order to create your running distributed application in STREAMER, two main phases are required:
+		<h3> PHASE 1: INTEGRATE OR CREATE YOUR ALGORITHM</h3>
+			With the first version of the distributed learning module, you can only use	Python algorithms during the distributed learning process.<br>
+			1) Add the folder containing your Python algorithm to the path src/main/resources/algs.<br>
+			• Create a Python file that manages the process of the possible actions	(initialization, training, evaluation, inference). In fact, STREAMER executes the Python code with an argument ’state’ that represents the action. So, the Python file should implement and run the corresponding methods according to the following state values it receives:<br>
+			– init: Initializes the model and pushes it to Redis.<br>
+			– train: Fits the model and pushes the updated one to Redis.<br>
+			– evaluate: Evaluates the model and pushes the metrics (the loss) to Redis.<br>
+			– inference: Makes the inference and pushes the prediction to Redis.<br><br>
+			2) Add an algorithm java class in cea.streamer.algs package only if you want to perform the inference with an online client.<br>
+			• Only the run() method should be implemented as the training step will be controlled by the server and called through the ’Client’ federated overlay.<br>
+			• You must use Redis as an intermediary data storage to save the arriving records to be accessible from the algorithm as the model is
+			coded in Python.<br><br>
+
+	<h3> PHASE 2: INTEGRATE OR CREATE YOUR USE CASE APPLICATION</h3>
+		For a distributed use of STREAMER, you have to setup a server and then, as many clients (offline or online) as you want.<br>
+		1) Setup for the server:<br>
+		(a) Add a folder with the project name + ’-server’.<br>
+		(b) Add a <i>federated.props</i> file to this folder.<br><br>
+		2) Setup for one client (repeat it for several clients):<br>
+		(a) Add a folder with the project name + ’ client id’ (id is a unique identifier for the client). For instance folder client 0.<br>
+		(b) Add three configuration files to this folder:<br>
+		• <i>algs.props</i><br>
+		• <i>streaming.props</i><br>
+		• <i>federated.props</i><br>
+		<u>Warning</u>: These 3 properties files must be completed in a specific way, depending on the nature of the client (online or offline). See the
+		user guide for more information.<br>
+		(c) Create the record class:<br>
+		i. It is essential to name the record class in this exact way: problem.type + “Record” + “.java”.<br>
+		ii. You can precise the headers of the dataset.<br>
+		iii. Implement the fill() method to indicate how the records should be filled with the correct values.<br>
+		iv. In case the dataset does not contain timestamp, you may use function sleep() and generate a new timestamp.<br><br>
+		
+		<u>Note</u> that in the same use case, you can use this class for several clients if each dataset has a similar format, or create new ones if needed.
+		<br>
+		<br>Once you have setup the server and the desired number of clients, run the application by following the steps of section 5.2 with your proper ’origin’ arguments (corresponding to the folders of the server and the clients, where the properties files are located). For instance:
+		<br><i>ServerLauncher.java cmapss/server<br>
+		java ClientLauncher.java cmapss/client_0 cmapss/client_1 cmapss/client_2</i><br>
+
+
+
+
+	
 							</section>
 							<section id="main_links" class="main special">
 								<h2>STREAMER</h2>
@@ -234,24 +298,24 @@ As you arrived this far, it is time to run the application:<br/>
 								<ul class="features">
 									<li>
 										<span class="icon solid major style2 fa fa-download"></span>
-										<h3>Latest release</h3><h5 style="color: red!important;font-weight: 700;margin: 0;">Release v3.0</h5><small>(source code+environment)</small>
-										<br/><br/>
+										<h3>Latest release</h3><h5 style="color: red!important;font-weight: 700;margin: 0;">Release v3.3</h5><small>(source code+environment)</small>
+										<br><br>
 										<a href="https://github.com/streamer-framework/streamer" target="_blank" class="button primary small main_color">Link</a>
 										
 									</li>
 									<li>
 										<span class="icon major style4 fa fa-magic"></span>
 										<h3>Quick Start</h3>
-										<br/>
-										<br/>
+										<br>
+										<br>
 										<a href="./getting-started.html" class="button primary small main_color">Link</a>
 									</li>
 									<li>
 										<span class="icon major style1 fa fa-book"></span>
 										<h3>STREAMER Guide</h3>
-										<br/>
-										<br/>
-										<a href="./docs/UserGuideSTREAMER_v2.0.pdf" target="_blank" class="button primary small main_color">Link</a>
+										<br>
+										<br>
+										<a href="https://github.com/streamer-framework/streamer/blob/main/UserGuideSTREAMER.pdf" target="_blank" class="button primary small main_color">Link</a>
 									</li>
 									<li>
 										<span class="icon major style5 fa fa-comments"></span>
