@@ -168,6 +168,10 @@ STREAMER use the following services that you can install yourself:<br>
 
 
 <h2>5) How to run STREAMER</h2>
+	For using Kibana graphical interface, open a web browser and type <a href="http://localhost:5601">http://localhost:5601</a>. You may:<br>
+	a) Create your own dashboard.<br>
+	b) Import a dashboard by going to Settings->Stack Management->Saved Objects->Import, and add your '.ndjson' file. There are some existing dashboards in <i>/services/kibana-dashboards</i> folder that you can use or adapt. Finally, click Settings->Analytics->Dashboard and select the dashboard you want to open.<br>
+
 	<h3>5.1) For a classical use of STREAMER</h3>
 		1)	Set up all the properties in the files .props within src/main/resources.<br><br>
 		2)	For using the data producer simulator functionality, run ProducerMain.java (placed in folder streamer/src/test/java/cea/streamer):
@@ -205,7 +209,7 @@ STREAMER use the following services that you can install yourself:<br>
 			(b) running ClientLauncher.java (for offline client(s), placed in folder streamer/src/federated) with the following arguments: <i>ClientLauncher.java [origin1 ... originN]</i><br>
 			[origin1 ... originN] arguments are optional. Each of them runs an offline client in a separate process; its name originX indicates the
 			folder where the properties files are located for this specific execution. If no argument is indicated, the system considers the properties
-			files of the distributed learning module demo, directly placed in src/main/resources/setup/cmapss/client 0 folder.<br><br>
+			files of the distributed learning module demo, directly placed in src/main/resources/setup/cmapss/client_0 folder.<br><br>
 		4) Repeat step 3 to launch as many offline or online clients as you want.<br><br>
 
 		<u>Note:</u> You can launch several clients at the beginning of an FL experience and then launch new clients or disconnect existing ones at any time during the experience.
@@ -267,7 +271,7 @@ STREAMER use the following services that you can install yourself:<br>
 		(a) Add a folder with the project name + ’-server’.<br>
 		(b) Add a <i>federated.props</i> file to this folder.<br><br>
 		2) Setup for one client (repeat it for several clients):<br>
-		(a) Add a folder with the project name + ’ client id’ (id is a unique identifier for the client). For instance folder client 0.<br>
+		(a) Add a folder with the project name + ’ client_id’ (id is a unique identifier for the client). For instance folder client_0.<br>
 		(b) Add three configuration files to this folder:<br>
 		• <i>algs.props</i><br>
 		• <i>streaming.props</i><br>
