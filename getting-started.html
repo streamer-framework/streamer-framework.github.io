@@ -75,22 +75,24 @@ In this case, you need to have in your computer the basic services STREAMER requ
 	<li>Run the basic services that STREAMER requires. You can install them using the docker (recommended) following the steps of section 3.1, or install them yourself following section 4.</li>
 	<li>Install Eclipse (<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a>) or the IDE you prefer.</li>
 	<li>Import the maven project: File->Import->Maven->Existing Maven Projects (and follow the steps to select the folder of STREAMER project).</li>
-	<li>[Optional] you are now ready to run our example use case: <br>
-		Run from eclipse the main class ProducerMain to launch the data ingester, or from console:<br>
-		<pre><code>java -cp target/streamer-1.0.0-test-jar-with-dependencies.jar cea.ProducerMain [setup_folder]</code></pre>
-		Run from eclipse the main class LauncherMain to launch the streaming pipeline, or from console.<br>
-		<pre><code>java -cp target/streamer-1.0.0-test-jar-with-dependencies.jar cea.LauncherMain [setup_folder]</code></pre>
-
+	<li>[Optional] You are now ready to try our example use case by running <i>ProducerMain [setup-folder]</i> to launch the streaming pipeline, or <i>LauncherMain [setup-folder]</i> to launch the streaming pipeline.
 	<li>Create your first use case in STREAMER by following the steps of section 6.</li>
 	<li>Run your application in STREAMER as section 5 shows.</li>
 </ol>
-<strong> Important:</strong> <br> 
-for running our use case example or our proposed algorithms do not forget installing the packages they need in your computer for:<br>
+
+<u>Note</u> that the user can <b>run</b> a class in two different ways:
 <ol>
-<ul>- Python:<br>
-<pre><code>pip3 -r install services/requirementsPython.txt</code></pre></ul>
-<ul>- R (services/requirementsR.txt):<br>
-<pre><code>install.packages(c("caret","RCurl","rredis", "kernlab", "e1071", "neuralnet","xgboost"))</code></pre></ul>
+	- From its own IDE (as Eclipse). Calling, for instance:	<i>LauncherMain.java args</i><br>
+    - From console by using the command:
+	<pre><code>mvn exec:java -Dexec.mainClass=cea.LauncherMain -Dexec.args="args"</code></pre>
+</ol>
+
+<u> Important:</u> for running our use case example or our proposed algorithms do not forget installing the packages they need in your computer for:<br>
+<ol>
+- Python:<br>
+<pre><code>pip3 -r install services/requirementsPython.txt</code></pre>
+- R (services/requirementsR.txt):<br>
+<pre><code>install.packages(c("caret","RCurl","rredis", "kernlab", "e1071", "neuralnet","xgboost"))</code></pre>
 </ol>
 <br>
 
@@ -244,10 +246,9 @@ STREAMER use the following services that you can install yourself:<br>
 			c.	Implement the fill method to indicate how the records should be filled with the correct values.<br> 
 			d.	In case the dataset does not contain timestamp, use sleep and generate a new timestamp.<br> 
 			<br>
-			<br>
-			As you arrived this far, it is time to run the application:<br>
-			<pre><code>cmd1> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.LauncherMain kdd-cup-99</code></pre>
-			<pre><code>cmd2> java -cp dsplatform-1.0.0-test-jar-with-dependencies.jar cea.streamer.ProducerMain kdd-cup-99</code></pre>
+			Time to run the application from your IDE or from console. For instance, to run <i>kdd-cup-99</i> use case from console we would type:
+			<pre><code>mvn exec:java -Dexec.mainClass=cea.ProducerMain -Dexec.args="kdd-cup-99" </code></pre>
+			<pre><code>mvn exec:java -Dexec.mainClass=cea.LauncherMain -Dexec.args="kdd-cup-99"</code></pre>
 
 
 	<h3>6.2) For a distributed environment of STREAMER</h3>
@@ -288,7 +289,7 @@ STREAMER use the following services that you can install yourself:<br>
 		<br>
 		<br>Once you have setup the server and the desired number of clients, run the application by following the steps of section 5.2 with your proper ’origin’ arguments (corresponding to the folders of the server and the clients, where the properties files are located). For instance:
 		<br><i>ServerLauncher.java cmapss/server<br>
-		java ClientLauncher.java cmapss/client_0 cmapss/client_1 cmapss/client_2</i><br>
+		ClientLauncher.java cmapss/client_0 cmapss/client_1 cmapss/client_2</i><br>
 
 
 
